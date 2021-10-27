@@ -1,3 +1,3 @@
-import { serverHttp } from './app';
+import { serverHttp, port } from './app';
 
-serverHttp.listen(4000, () => console.log('🔥 Server up'));
+serverHttp.listen(port, () => console.log('🔥 Server up'));

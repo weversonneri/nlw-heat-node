@@ -7,6 +7,8 @@ import { Server } from 'socket.io';
 import { router } from './routes';
 
 const app = express();
+const port = process.env.PORT || 4000;
+
 app.use(cors());
 
 const serverHttp = http.createServer(app);
@@ -36,4 +38,4 @@ app.get('/signin/callback', (request, response) => {
   return response.json(code);
 });
 
-export { serverHttp, io };
+export { serverHttp, io, port };
